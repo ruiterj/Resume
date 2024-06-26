@@ -115,6 +115,14 @@ textarea {
     margin-bottom: 20px;
 }
 
+button {
+    transition: transform 0.1s ease;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
 .add-btn, .remove-btn {
     padding: 10px 15px;
     border: none;
