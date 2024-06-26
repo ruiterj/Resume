@@ -48,6 +48,7 @@ h1 {
     font-size: 200px;
     margin: 0;
     text-align: left;
+    color: black;
 }
 
 h2 {
@@ -56,6 +57,7 @@ h2 {
     position: absolute;
     left: 0;
     top: 100%;
+    color: black;
 }
 
 .button-link {
@@ -75,4 +77,12 @@ h2 {
     color: #000000;
     background-color: #ffffff;
     border: 2px solid black;
+}
+
+.button-link {
+    transition: transform 0.1s ease;
+}
+
+.button-link:active {
+    transform: translateY(2px);
 }
