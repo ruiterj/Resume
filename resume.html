@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <nav>
-    <ul>
-        <li><a class="navbar-button" href="resume.html">Create</a></li>
-        <li><a class="navbar-button" href="userinfo.html">Account</a></li>
+    <ul class="navbarList">
+        <li class="navbarListItem"><a class="navbar-button" href="resume.html">Create</a></li>
+        <li class="navbarListItem"><a class="navbar-button" href="userinfo.html">Account</a></li>
     </ul>
 </nav>
 <body>
@@ -25,28 +25,33 @@
                         <input type="file" id="profileImage" name="profileImage" accept="image/*">
                     </div>
                     <div class="form-group">
-                        <label for="fullName">Full Name:</label>
-                        <input type="text" id="fullName" name="fullName">
+                        <label for="fullNameInput">Full Name:</label>
+                        <input type="text" id="fullNameInput" name="fullNameInput">
                     </div>
                     <div class="form-group">
                         <label for="jobTitle">Job Title:</label>
-                        <input type="text" id="jobTitle" name="jobTitle">
+                        <input type="text" id="jobTitleInput" name="jobTitle">
                     </div>
                     <div class="form-group">
                         <label for="telephone">Telephone Number:</label>
-                        <input type="tel" id="telephone" name="telephone">
+                        <input type="tel" id="telNumberInput" name="telephone">
                     </div>
                     <div class="form-group">
                         <label for="address">Address:</label>
-                        <input type="text" id="address" name="address">
+                        <input type="text" id="adressInput" name="address">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="emailInput" name="email">
                     </div>
                 </section>
                 <section class="form-section skill-section">
                     <h2>Skills</h2>
+                    <div class="input-container-child">
+                        <input type="text" id="skillNameInput" placeholder="Skill Name">
+                        <input type="number" id="skillLevelInput" class="skill-level-input" placeholder="Level (1-5)" min="1" max="5">
+                        <button class="addButtonSmall">Add</button>
+                    </div>
                 </section>
             </div>
             <div class="work-experience-input-container form-section">
@@ -60,24 +65,25 @@
     <div class="resume-container">
         <div class="resume">
             <div class="left-panel">
-            <h2>Naam</h2>
+            <h2 id="fullNameDisplay">Naam</h2>
             <img class="profile-pic" src="https://images.unsplash.com/photo-1571216690333-2efa110cc981?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJldHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-            <h6>Job Title</h6>
+            <h6 id="jobTitleDisplay">Job Title</h6>
             <div class="personal-information-container">
                 <div class="icon-text-pair">
                     <i class="fa-solid fa-envelope"></i>
-                    <p class="personal-info-text" id="resumeEmail">Email@gmail.com</p>
+                    <p class="personal-info-text" id="emailDisplay">Email@gmail.com</p>
                 </div>
                 <div class="icon-text-pair">
                     <i class="fa-solid fa-house"></i>
-                    <p class="personal-info-text" id="resumeAddress">Streetname</p>
+                    <p class="personal-info-text" id="adressDisplay">Streetname</p>
                 </div>
                 <div class="icon-text-pair">
                     <i class="fa-solid fa-phone"></i>
-                    <p class="personal-info-text" id="resumePhone">06-34938293</p>
+                    <p class="personal-info-text" id="telNumberDisplay">06-34938293</p>
                 </div>
             </div>
             <h2 style="margin-top: 60px;">Skills</h2>
+            <div id="resumeSkills" class="skill-container"></div>
             <h2>References</h2>
         </div>
             <div class="right-panel">
@@ -90,5 +96,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

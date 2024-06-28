@@ -4,6 +4,7 @@ body {
     flex-direction: row;
     margin-top: 60px;
     font-family: "Roboto", sans-serif;
+    background-color: rgb(231, 231, 231);
 }
 
 nav {
@@ -18,11 +19,11 @@ nav {
     height: 60px;
     align-items: center;
 }
- ul {
+.navbarList {
     display: flex;
  }
 
- li {
+.navbarListItem {
     margin-right: 10px;
  }
 
@@ -34,12 +35,16 @@ nav {
 
 .input-container {
     width: 50%;
+    border-right: 1px solid black;
+    padding-right: 10px;
 }
 
 .resume-container {
     width: 50%;
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 120px;
 }
 
 .resume {
@@ -48,12 +53,14 @@ nav {
     align-self: center;
     display: flex;
     flex-direction: row;
+    background-color: white;
+    border: 0.5px solid black;
 }
 
 .left-panel {
     width: 30%;
     height: 100%;
-    border: 1px solid black;   
+    border-right: 1px solid black;   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +68,6 @@ nav {
 
 .right-panel {
     width: 70%;
-    border: 1px solid red;
 }
 
 h1 {
@@ -83,11 +89,9 @@ h1 {
     align-items: flex-start;
     width: calc(100% - 20px);
     margin-left: 20px;
-    border: 1px solid red;
 }
 
 .icon-text-pair {
-    border: 1px solid blue;
     display: flex;
     align-items: center;
 }
@@ -176,4 +180,22 @@ textarea {
     display: block;
     margin-bottom: 8px;
     color: #555;
+}
+
+.input-container-child {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container-child .skill-level-input {
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.addButtonSmall {
+    color: white;
+    background: black;
+    border-radius: 5px;
+
 }

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resumeColumn = document.querySelector('.resume-column');
     let isDragging = false;
 
-    divider.addEventListener('mousedown', function(e) {
+    divider.addEventListener('mousedown', function() {
         isDragging = true;
         document.addEventListener('mousemove', resize);
         document.addEventListener('mouseup', stopResize);
