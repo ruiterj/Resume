@@ -143,6 +143,34 @@ textarea {
     width: 100%;
 }
 
+.skillList {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skill-wrapper {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 5%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.skill-wrapper span {
+    margin-right: 10px;
+}
+
+.skill-bar {
+    border-radius: 5px;
+    height: 15px;
+    background-color: teal;
+}
+
 .form-section {
     width: 50%;
     background-color: white;
