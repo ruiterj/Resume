@@ -230,6 +230,14 @@ textarea {
 
 .addButtonBig {
     width: 100%;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+
+}
+
+.addButtonBig:hover {
+    background-color: rgb(2, 2, 59);
 }
 
 .input-and-text {
@@ -250,3 +258,13 @@ textarea {
     height: 200px;
 }
 
+.remove-button {
+    color: white;
+    background-color: rgb(133, 3, 3);
+    border-radius: 5px;
+    align-items: end;
+}
+
+.remove-button:hover {
+    background-color: rgb(160, 0, 0);
+}

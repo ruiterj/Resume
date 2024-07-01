@@ -51,9 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
             workItem.textContent = `Workplace: ${workNameV} - Workplace: ${workDateV} - Workplace: ${workPlaceV} - Workplace: ${workDescriptionV}`;
 
             const removeButton = document.createElement('button');
+            removeButton.className = 'remove-button'
             removeButton.textContent = 'Remove';
             removeButton.addEventListener('click', function() {
                 workListItem.remove();
+                workItem.remove();
             });
 
             workListItem.appendChild(removeButton)
@@ -87,8 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
+            removeButton.className = 'remove-button'
             removeButton.addEventListener('click', function() {
                 eduListItem.remove();
+                eduItem.remove()
             });
 
             eduListItem.appendChild(removeButton)
