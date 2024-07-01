@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const workListItem = document.createElement('li');
             workListItem.className = 'work-experience-item';
             workListItem.textContent = `Workplace: ${workNameV} - Date: ${workDateV} - City: ${workPlaceV} - Description: ${workDescriptionV}`;
-
+            workListItem.draggable = true;
 
             workItem = document.createElement('p');
             workItem.className = 'work-experience-paragraph';
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const eduListItem = document.createElement('li');
             eduListItem.className = 'edu-experience-item';
             eduListItem.textContent = `Institution: ${eduNameV} - Date: ${eduDateV} - City: ${eduPlaceV} - Description: ${eduDescriptionV}`;
-
+            eduListItem.draggable = true;
 
             eduItem = document.createElement('p');
             eduItem.className = 'education-paragraph';
