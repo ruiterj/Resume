@@ -227,3 +227,26 @@ textarea {
     border-radius: 5px;
 
 }
+
+.addButtonBig {
+    width: 100%;
+}
+
+.input-and-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.work-experience-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field-work, .input-field-edu {
+    margin-bottom: 10px;
+}
+
+.input-field-work-big, .input-field-edu-big {
+    height: 200px;
+}
+

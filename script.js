@@ -5,11 +5,104 @@ document.addEventListener('DOMContentLoaded', function () {
     const telNumberInput = document.getElementById('telNumberInput');
     const adressInput = document.getElementById('adressInput');
     const emailInput = document.getElementById('emailInput');
+
+
     const addButton = document.getElementById('addButtonSmall');
     const skillNameInput = document.getElementById('skillNameInput');
     const skillLevelInput = document.getElementById('skillLevelInput');
     const skillList = document.getElementById('skillList');
     const skillContainer = document.getElementById('resumeSkills');
+
+    const workName = document.getElementById('input-company-name');
+    const workDate = document.getElementById('input-company-date');
+    const workPlace = document.getElementById('input-company-place');
+    const workDescription = document.getElementById('input-company-description');
+    const addButtonBigWork = document.getElementById('addButtonBigWork');
+    const workContainer = document.getElementById('work-container')
+    const workList = document.getElementById('workList')
+
+    
+    const eduName = document.getElementById('input-edu-name');
+    const eduDate = document.getElementById('input-edu-date');
+    const eduPlace = document.getElementById('input-edu-place');
+    const eduDescription = document.getElementById('input-edu-description');
+    const addButtonBigEdu = document.getElementById('addButtonBigEdu')
+    const eduContainer = document.getElementById('education-container')
+    const eduList = document.getElementById('eduList')
+
+
+
+    addButtonBigWork.addEventListener('click', function(e) {
+        e.preventDefault();
+        const workNameV = workName.value;
+        const workDateV = workDate.value;
+        const workPlaceV = workPlace.value;
+        const workDescriptionV = workDescription.value;
+
+        if(workNameV && workDateV && workPlaceV && workDescriptionV){
+
+            const workListItem = document.createElement('li');
+            workListItem.className = 'work-experience-item';
+            workListItem.textContent = `Workplace: ${workNameV} - Date: ${workDateV} - City: ${workPlaceV} - Description: ${workDescriptionV}`;
+
+
+            workItem = document.createElement('p');
+            workItem.className = 'work-experience-paragraph';
+            workItem.textContent = `Workplace: ${workNameV} - Workplace: ${workDateV} - Workplace: ${workPlaceV} - Workplace: ${workDescriptionV}`;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', function() {
+                workListItem.remove();
+            });
+
+            workListItem.appendChild(removeButton)
+            workContainer.append(workItem);
+            workList.append(workListItem);
+
+            workName.value = '';
+            workDate.value = '';
+            workPlace.value = '';
+            workDescription.value = '';
+        }
+    })
+
+    addButtonBigEdu.addEventListener('click', function(e) {
+        e.preventDefault();
+        const eduNameV = eduName.value;
+        const eduDateV = eduDate.value;
+        const eduPlaceV = eduPlace.value;
+        const eduDescriptionV = eduDescription.value;
+
+        if(eduNameV && eduDateV && eduPlaceV && eduDescriptionV){
+
+            const eduListItem = document.createElement('li');
+            eduListItem.className = 'edu-experience-item';
+            eduListItem.textContent = `Institution: ${eduNameV} - Date: ${eduDateV} - City: ${eduPlaceV} - Description: ${eduDescriptionV}`;
+
+
+            eduItem = document.createElement('p');
+            eduItem.className = 'education-paragraph';
+            eduItem.textContent = `intitution: ${eduNameV} - date: ${eduDateV} - place: ${eduPlaceV} - description: ${eduDescriptionV}`;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', function() {
+                eduListItem.remove();
+            });
+
+            eduListItem.appendChild(removeButton)
+            eduContainer.append(eduItem);
+            eduList.append(eduListItem)
+
+            eduName.value = '';
+            eduDate.value = '';
+            eduPlace.value = '';
+            eduDescription.value = '';
+        }
+    })
+
+
 
     addButton.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent form submission
