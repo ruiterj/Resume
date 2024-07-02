@@ -269,3 +269,37 @@ textarea {
 .remove-button:hover {
     background-color: rgb(160, 0, 0);
 }
+
+
+.education-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-pair {
+    display: flex;
+    flex-direction: row;
+}
+
+.output-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.output-function {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.output-place {
+    font-size: 12px;
+}
+
+.output-date {
+    font-size: 12px;
+}
+
+.output-description {
+    font-size: 10px;
+    font-weight: inherit;
+}

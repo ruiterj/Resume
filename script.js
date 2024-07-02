@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addButtonBigWork = document.getElementById('addButtonBigWork');
     const workContainer = document.getElementById('work-container')
     const workList = document.getElementById('workList')
+    const workFunction  = document.getElementById("input-company-function")
 
     
     const eduName = document.getElementById('input-edu-name');
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addButtonBigEdu = document.getElementById('addButtonBigEdu')
     const eduContainer = document.getElementById('education-container')
     const eduList = document.getElementById('eduList')
-
+    const eduCourse = document.getElementById('input-edu-course')
 
 
     addButtonBigWork.addEventListener('click', function(e) {
@@ -38,12 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const workDateV = workDate.value;
         const workPlaceV = workPlace.value;
         const workDescriptionV = workDescription.value;
+        const workFunctionV = workFunction.value;
 
         if(workNameV && workDateV && workPlaceV && workDescriptionV){
 
             const workListItem = document.createElement('li');
             workListItem.className = 'work-experience-item';
-            workListItem.textContent = `Workplace: ${workNameV} - Date: ${workDateV} - City: ${workPlaceV} - Description: ${workDescriptionV}`;
+            workListItem.textContent = `function: ${workFunctionV} - Workplace: ${workNameV} - Date: ${workDateV} - City: ${workPlaceV} - Description: ${workDescriptionV}`;
             workListItem.draggable = true;
 
             workItem = document.createElement('p');
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 workItem.remove();
             });
 
-            workListItem.appendChild(removeButton)
+            workListItem.appendChild(removeButton);
             workContainer.append(workItem);
             workList.append(workListItem);
 
@@ -75,17 +77,61 @@ document.addEventListener('DOMContentLoaded', function () {
         const eduDateV = eduDate.value;
         const eduPlaceV = eduPlace.value;
         const eduDescriptionV = eduDescription.value;
+        const eduCourseV = eduCourse.value;
+        console.log(eduCourseV)
 
         if(eduNameV && eduDateV && eduPlaceV && eduDescriptionV){
 
             const eduListItem = document.createElement('li');
             eduListItem.className = 'edu-experience-item';
-            eduListItem.textContent = `Institution: ${eduNameV} - Date: ${eduDateV} - City: ${eduPlaceV} - Description: ${eduDescriptionV}`;
+            eduListItem.textContent = `Course: ${eduCourseV} Institution: ${eduNameV} - Date: ${eduDateV} - City: ${eduPlaceV} - Description: ${eduDescriptionV}`;
             eduListItem.draggable = true;
 
-            eduItem = document.createElement('p');
-            eduItem.className = 'education-paragraph';
-            eduItem.textContent = `intitution: ${eduNameV} - date: ${eduDateV} - place: ${eduPlaceV} - description: ${eduDescriptionV}`;
+            eduItem = document.createElement('div');
+            eduItem.className = 'education-div';
+
+            var headersDiv = document.createElement('div')
+            headersDiv.className = 'text-pair'
+            eduItem.appendChild(headersDiv)
+
+            console.log(eduCourseV)
+            var eduCourseSpan = document.createElement('span');
+            eduCourseSpan.className = 'output-function';
+            eduCourseSpan.textContent = eduCourseV;
+            headersDiv.appendChild(eduCourseSpan);
+
+            var eduNameSpan = document.createElement('span');
+            eduNameSpan.className = 'output-name';
+            eduNameSpan.textContent =` - ${eduNameV}` ;
+            headersDiv.appendChild(eduNameSpan);
+
+            var datePlaceDiv = document.createElement('div')
+            datePlaceDiv.className = 'text-pair'
+            eduItem.appendChild(datePlaceDiv)
+
+            var eduIconSpan = document.createElement('i');
+            eduIconSpan.className = "fa-solid fa-calendar-days";
+            datePlaceDiv.appendChild(eduIconSpan);
+
+            var eduDateSpan = document.createElement('span');
+            eduDateSpan.className = 'output-date';
+            eduDateSpan.textContent = eduDateV;
+            datePlaceDiv.appendChild(eduDateSpan);
+
+            
+            var eduIconSpan = document.createElement('i');
+            eduIconSpan.className = 'fa-solid fa-location-pin';
+            datePlaceDiv.appendChild(eduIconSpan);
+
+            var eduPlaceSpan = document.createElement('span');
+            eduPlaceSpan.className = 'output-location';
+            eduPlaceSpan.textContent = eduPlaceV;
+            datePlaceDiv.appendChild(eduPlaceSpan);
+
+            var eduDescriptionSpan = document.createElement('span');
+            eduDescriptionSpan.className = 'output-description';
+            eduDescriptionSpan.textContent = eduDescriptionV;
+            eduItem.appendChild(eduDescriptionSpan);
 
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
@@ -103,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             eduDate.value = '';
             eduPlace.value = '';
             eduDescription.value = '';
+            eduCourse.value = '';
         }
     })
 
