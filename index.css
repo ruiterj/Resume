@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: slideInFromLeft 1s ease-in-out forwards;
+    animation: slideInFromLeft 2s ease-in-out forwards;
 }
 
 @keyframes slideInFromLeft {
@@ -74,9 +74,9 @@ h2 {
 }
 
 .button-link:hover {
-    color: #000000;
-    background-color: #ffffff;
-    border: 2px solid black;
+    color: #ffffff;
+    background-color: #3a3a3a;
+
 }
 
 .button-link {

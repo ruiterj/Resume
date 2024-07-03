@@ -94,6 +94,8 @@ h1 {
 .icon-text-pair {
     display: flex;
     align-items: center;
+    width: 100%;
+    background-color: red;
 }
 
 .personal-info-text {
