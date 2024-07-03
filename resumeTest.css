@@ -19,13 +19,14 @@ nav {
     height: 60px;
     align-items: center;
 }
+
 .navbarList {
     display: flex;
- }
+}
 
 .navbarListItem {
     margin-right: 10px;
- }
+}
 
 .navbar-button {
     color: white;
@@ -43,31 +44,36 @@ nav {
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
-    padding-bottom: 120px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .resume {
-    width: 70%;
-    height: calc(70% * 1.41428571);
-    align-self: center;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     background-color: white;
     border: 0.5px solid black;
+    box-sizing: border-box;
 }
 
 .left-panel {
     width: 30%;
-    height: 100%;
-    border-right: 1px solid black;   
+    border-right: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .right-panel {
     width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -77,17 +83,18 @@ h1 {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
+    max-width: 150px;
 }
 
 .personal-information-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: calc(100% - 20px);
+    width: 100%;
     margin-left: 20px;
 }
 
@@ -114,12 +121,13 @@ input[type="tel"],
 input[type="file"],
 input[type="number"],
 textarea {
-    width: calc(100% - 16px);
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus,
@@ -168,28 +176,28 @@ textarea {
 .skill-bar {
     border-radius: 5px;
     height: 15px;
-    background-color: teal;
+    background-color: rgb(0, 0, 0);
 }
 
 .form-section {
-    width: 50%;
+    width: 100%;
     background-color: white;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0e0e0;
+    box-sizing: border-box;
 }
 
 .work-experience-input-container {
-    width: calc(100% - 40px);
-    margin: 20px;
-
+    width: 100%;
+    margin: 20px 0;
 }
 
 .education-input-container {
-    width: calc(100% - 40px);
-    margin: 20px;
+    width: 100%;
+    margin: 20px 0;
 }
 
 .skill-section {
@@ -225,7 +233,6 @@ textarea {
     color: white;
     background: black;
     border-radius: 5px;
-
 }
 
 .addButtonBig {
@@ -234,7 +241,6 @@ textarea {
     background-color: black;
     margin-top: 20px;
     height: 35px;
-
 }
 
 .addButtonBig:hover {
@@ -251,11 +257,13 @@ textarea {
     flex-direction: column;
 }
 
-.input-field-work, .input-field-edu {
+.input-field-work,
+.input-field-edu {
     margin-bottom: 10px;
 }
 
-.input-field-work-big, .input-field-edu-big {
+.input-field-work-big,
+.input-field-edu-big {
     height: 200px;
 }
 
@@ -270,7 +278,6 @@ textarea {
     background-color: rgb(160, 0, 0);
 }
 
-
 .education-div {
     display: flex;
     flex-direction: column;
@@ -280,14 +287,12 @@ textarea {
     display: flex;
     flex-direction: row;
     margin-top: -10px;
-
 }
 
 .text-pair-head {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .output-name {
@@ -322,6 +327,32 @@ textarea {
     margin-right: 10px;
 }
 
-.fa-calendar-days, .fa-location-pin {
+.fa-calendar-days,
+.fa-location-pin {
     margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .input-container,
+    .resume-container {
+        width: 100%;
+    }
+
+    .resume {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+    }
+
+    .left-panel {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
 }
